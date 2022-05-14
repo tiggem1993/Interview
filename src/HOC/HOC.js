@@ -7,7 +7,12 @@ export const HOC = (Comp, iincrementBy = 1) => {
       const count = myAge + iincrementBy;
       setAge(count);
     };
-    return <Comp myAge={myAge} setAge={incrementAge} {...props} />;
+    return (
+      <div>
+        <h1>This is HOC</h1>
+        <Comp myAge={myAge} setAge={incrementAge} {...props} />
+      </div>
+    );
   };
 
   return NewComp;
